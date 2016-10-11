@@ -1,0 +1,41 @@
+1. copy file name public_access.php into the main folder
+
+2. in the conf.php paste this statement
+//------PUBLIC LOGIN----------------------------------------
+define('PUBLIC_LOGIN',true);						//true/false for public login, enable or disable login
+define('PUBLIC_USER_TYPE_CODE','PUBLIC');			//for public user type code, mostly is PUBLIC
+define('PUBLIC_ACCESS_FILE','public_access.php');	//for public access file, mostly the name is public_access.php or you can custom to other file
+//------//PUBLIC LOGIN----------------------------------------
+
+
+3. in the login_custom.php paste below statement after the "log masuk" button.
+<tr>
+	<form id="form2" name="form2" method="post" action="<? echo PUBLIC_ACCESS_FILE; ?>">
+		<td align="left"><span style=" cursor:pointer;font-size:12px; color:#0000FF;" onClick="document.forms['form2'].submit();"><u>Daftar baru</u></span>
+			<input name="menuID" type="hidden" class="inputInput" id="menuID" size="20" maxlength="20" value="66" />
+		</td>
+	</form>				
+	<form id="form3" name="form3" method="post" action="<? echo PUBLIC_ACCESS_FILE; ?>">
+		<td align="right"><span style=" cursor:pointer;font-size:12px; color:#0000FF;" onClick="document.forms['form3'].submit();"><u>Lupa Katalaluan</u></span>
+			<input name="menuID" type="hidden" class="inputInput" id="menuID" size="20" maxlength="20" value="66"/>
+		</td>
+	</form>				
+</tr>
+
+the menuID, value is depend to the page that will be display as public user.
+
+
+4. in the database you must have user in the pruser datababase table
+username : PUBLIC or you can have any username
+USERPASSWORD : you can have any paswword
+USERTYPECODE : PUBLIC ,this user type code is define in the confi.php
+
+5. pre-requize, please copy below  and put in the confi.php, if it is no in the conf.php
+
+//------URL SECURITY----------------------------------------
+define('MENU_URL_SECURITY',false);		//true/false for ENCODE menu link url for security purpose
+define('BUTTON_URL_SECURITY',false);		//true/false for ENCODE button link url for security purpose
+define('OTHERS_URL_SECURITY',false);		//true/false for ENCODE others link url for security purpose
+//------//URL SECURITY----------------------------------------
+
+

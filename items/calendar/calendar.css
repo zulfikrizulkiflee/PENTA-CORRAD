@@ -1,0 +1,102 @@
+.calBodyContainer td {
+    vertical-align:top; text-align:left;
+    border:0.1px solid #EAEAEA;
+    width:100px; height:70px;
+}
+
+
+/* #content .calBodyContainer td {
+        vertical-align:top; text-align:left;
+        border:0.1px solid #EAEAEA;
+        width:100px; height:70px;
+}
+
+#sideLeftContent .calBodyContainer td {
+        vertical-align:top; text-align:left;
+        border:0.1px solid #EAEAEA;
+        width:100px; height:70px;
+}
+*/
+
+
+.calDay{ background-color:#aaaaaa; height:30px !important; vertical-align:middle !important;}
+.calMonthYear{ background-color:#666666; color:#FFFFFF; font-weight:bold;}
+.calDate{	
+    background-color:#E0E9E7;
+}
+.calOffDay{	
+    background-color:#CCCCCC;
+}
+.calToday{	
+    background-color:#89AFC9;
+}
+.calDateEvent1{	
+    background-color:#BDCFDB; cursor:pointer;
+}
+.calDateEvent2{	
+    background-color:#97A9FC; cursor:pointer;
+}
+
+.calDateEventNum{	
+    background-color:#3B6C8E; cursor:pointer;
+    padding:5px 10px; float:right; color:#fff;
+}
+
+.TITLE1{	background-color:#23a964;	border:0.1px solid #EAEAEA;	text-align:center;	cursor:pointer;	}
+.TITLE2{	background-color:#CC3300;	border:0.1px solid #EAEAEA;	text-align:center;	cursor:pointer;	color: #FFFF33; }
+.TITLE3{	background-color:#000099;	border:0.1px solid #EAEAEA;	text-align:center;	cursor:pointer;	color: #FFFF33; }
+.TITLE4{	background-color:#FFFF00;	border:0.1px solid #EAEAEA;	text-align:center;	cursor:pointer;	}
+.TITLE5{	background-color:#CC33FF;	border:0.1px solid #EAEAEA;	text-align:center;	cursor:pointer;	}
+
+#tt {position:absolute; display:block; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold;}
+#tttop {display:block; height:5px; margin-left:5px;  overflow:hidden}
+#ttcont {display:block; padding:2px 12px 3px 7px; margin-left:5px; background:#E3FBFA; color:#003; border:2px #09F solid;}
+#ttcont hr{margin:1px 0 3px 0; color:#00C;}
+#ttbot {display:block; height:5px; margin-left:5px;  overflow:hidden}
+
+
+.calPointer{ cursor:pointer; background-color:#fff; color:#666; font-weight:bold; padding:5px 10px; font-size: 12px; text-decoration: none;}
+.calPointer:hover{ cursor:pointer; background-color:#ccc; color:#fff;}
+.calPointerGo{ cursor:pointer; background-color:#666666; color:#FFFFFF; font-weight:bold; padding: 5px; }
+.calPast{	background-color:#FF0000;	border:0.1px solid #EAEAEA;	text-align:center;	}
+.calGot1{	background-color:#FFFF66;	border:0.1px solid #EAEAEA;	text-align:center;	cursor:pointer;	}
+.calGotFull{	background-color:#FE8194;	border:0.1px solid #EAEAEA;	text-align:center;	}
+.calGot{	background-color:#FFFF66;padding-top:15px;padding-bottom:15px;padding-left:30px;padding-right:30px;	}
+
+
+
+/*CSS utk Tinypopup*/
+.tbox {position:absolute; display:none; padding:14px 17px; z-index:900}
+.tinner {padding:15px; -moz-border-radius:5px; border-radius:5px; background:#fff url(../img/tinybox/preload.gif) no-repeat 50% 50%; border-right:1px solid #333; border-bottom:1px solid #333}
+.tmask {
+    position:absolute; display:none; top:0px; left:0px; height:100%; width:100%; z-index:800;
+    /* background:#000; */
+    background:url(../img/tinybox/tinyboxbg.png) repeat;
+}
+.tclose {position:absolute; top:0px; right:0px; width:30px; height:30px; cursor:pointer; background:url(../img/tinybox/close.png) no-repeat}
+.tclose:hover {background-position:0 -30px}
+
+#success {
+    background:#2ea125; color:#fff; text-shadow:1px 1px #1b6116; 
+    border:2px solid #8BFA82;
+    padding:10px; -moz-border-radius:0; border-radius:0
+}
+#error {
+    background:#A80000; color:#fff; text-shadow:1px 1px #CC0000; 
+    border:2px solid #F24B4B;
+    padding:10px; -moz-border-radius:0; border-radius:0
+}
+#paparEvent {
+    background-color:#3B6C8E; color:#fff; text-shadow:1px 1px #02304F; 
+    border:2px solid #89AFC9;
+    padding:10px 5px; -moz-border-radius:0; border-radius:0
+}
+
+.paparEventMonth {
+
+}
+.paparEventMonth th{font-weight:bold;}
+.paparEventMonth td {vertical-align:top;}
+
+#paparEvent a {color:#fff;}
+#paparEvent  a:hover {color:#E0E9E7; text-shadow:1px 1px #666; }

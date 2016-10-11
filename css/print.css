@@ -1,0 +1,4 @@
+/* loaded for content printing only */
+#breadcrumbs,#debug,#header,#pageProperties,#sidebar,#bottom,table.pageLevelControls{display: none;}
+#content{margin: 0 !important;}
+table,th,td{border:1px solid #b4b4b4 !important;}

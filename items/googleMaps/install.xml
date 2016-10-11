@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension>
+	<icon>gmap.png</icon>
+	<name>googleMaps</name>
+	<title>Google Maps</title>
+	<description>Embedded Google Maps</description>
+	<version>1.0</version>
+	<author>Encoral Digital Solutions Sdn Bhd</author>
+	<authorUrl>http://www.nc.com.my</authorUrl>
+
+	<index>
+		<file type="js" path="http://maps.google.com/maps/api/js?sensor=false" />
+		<file type="js" path="prettymap.js" />
+	</index>
+
+	<builder>
+		<file type="php" path="googleMaps.php" />
+	</builder>
+</extension>

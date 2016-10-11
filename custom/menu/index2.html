@@ -1,0 +1,207 @@
+<script language="javascript" type="text/javascript" src="../../tools/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.droppable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.position.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.resizable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.selectable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.sortable.js"></script>
+<!--<script language="javascript" type="text/javascript" src="js/ui.nestedSortable.js"></script>-->
+<style>
+ul
+{
+	list-style-type: none;
+	position:relative;
+	margin:0px 0px 0px 18px;
+	padding:0px 0px 0px 0px;
+	font-size:12px;
+	font-family:Arial;
+	 min-height:10px; 
+
+}
+li
+{
+	border-bottom:1px solid #E5E5E5;
+	list-style-type: none;
+	padding:0px;
+	margin:0px;
+	 width: 150px; 
+}
+#menuContainer 
+{
+	width:250px;
+	height:400px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border:1px solid black;
+	padding:-20px;
+	
+}
+
+#menuContainer > ul
+{
+	margin:0px;
+}
+#menuContainer > ul > ul
+{
+	margin-left:18px;
+}
+#menuContainer > ul > ul > ul
+{
+	margin-left:36px;
+}
+
+.sortTarget
+{
+	background-color:yellow;
+}
+.handle
+{
+	
+	height:10px;
+	background-image:url(img/grid-dot.png);
+	background-repeat:no-repeat;
+	cursor:move;
+	height:20px;
+}
+.handle span
+{
+	position:absolute;right:0px;
+}
+#menuButtons
+{
+	width:250px;
+}
+.selected
+{
+	background-color:orange;
+}
+
+.parent .selector show
+{
+	
+}
+
+.menuParent
+{
+	cursor:pointer;
+}
+
+</style>
+
+<div id="menuContainer">
+	<ul class="menu">
+		Profil
+		<ul class="menu">
+			<li id="12" style=""><a id="12" href="index.php?page=change_password&amp;menuID=12" >Tukar Kata Laluan</a></li>
+			<li id="18" style=""><a id="18" href="index.php?page=themes&amp;menuID=18" >Themes</a></li>
+			<li id="55" style=""><a id="55" href="index.php?page=page_wrapper&amp;menuID=55" >aaaaaaaa</a></li>
+			<li id="26" style=""><a id="26" href="index.php?page=page_wrapper&amp;menuID=26" >test</a></li>
+			<li id="64" style=""><a id="64" href="index.php?page=page_wrapper&amp;menuID=64" >calendar</a></li>
+		</ul>
+		
+	</ul>	
+	<ul class="menu">
+		<img src="img/minus-small-white.png" class="selector show" /><span class="title">Konfigurasi</span>
+		<ul class="menu">
+			<li id="3" style=""><a id="3" href="index.php?page=system_config&amp;menuID=3" >Konfigurasi Sistem</a></li>
+			<li id="6" style=""><a id="6" href="index.php?page=menu_editor&amp;menuID=6" >Menu Editor</a></li>
+			<li id="7" style=""><a id="7" href="index.php?page=page_editor&amp;menuID=7" >Page Editor</a></li>
+			<li id="8" style=""><a id="8" href="index.php?page=page_control&amp;menuID=8" >Control Editor</a></li>
+			<li id="13" style=""><a id="13" href="index.php?page=bl_editor&amp;menuID=13" >BL Editor</a></li>
+			<li id="14" style=""><a id="14" href="index.php?page=trigger_editor&amp;menuID=14" >Trigger Editor</a></li>
+			<li id="15" style=""><a id="15" href="index.php?page=translation_editor&amp;menuID=15" >Translation Editor</a></li>
+			<li id="17" style=""><a id="17" href="index.php?page=page_wizard&amp;menuID=17" >Page Wizard</a></li>
+			<li id="16" style=""><a id="16" href="index.php?page=extension_editor&amp;menuID=16" >Extension Editor</a></li>
+			<ul class="menu">
+				<img src="img/minus-small-white.png" class="selector show" /><span class="title">Lain Lain</span>
+				<ul class="menu">
+					<li id="3" style=""><a id="3" href="index.php?page=system_config&amp;menuID=3" >Pendaftaran Pengguna</a></li>
+					<li id="6" style=""><a id="6" href="index.php?page=menu_editor&amp;menuID=6" >User Group Management</a></li>
+					<li id="7" style=""><a id="7" href="index.php?page=page_editor&amp;menuID=7" >Reference</a></li>
+				</ul>
+			</ul>
+			<li id="19" style=""><a id="19" href="index.php?page=system_impexp&amp;menuID=19" >Import Export</a></li>
+			<li id="20" style=""><a id="20" href="index.php?page=message_editor&amp;menuID=20" >Message Editor</a></li>
+			<li id="21" style=""><a id="21" href="index.php?page=audit_view&amp;menuID=21" >Audit Trail</a></li></ul>	
+	</ul>
+	
+</div>
+<div id="menuButtons"><input type="button" value="+" /></div>
+
+<script>
+$(document).ready(function(){
+	
+	$('#menuContainer').sortable({
+
+		placeholder: "sortTarget"
+	});
+
+	$('ul').sortable({
+
+		/*items: "li:not(li.handle)",*/
+		connectWith: ".menu",
+		distance: 15,
+		placeholder: "sortTarget"
+	}).disableSelection();
+	
+	
+	$('ul').dblclick(function(){	
+		
+		//$(this).addClass('selected');
+		
+		
+	});
+	
+	$('.menuParent img.selector').click(function(){
+	
+		if($(this).hasClass('show'))
+		{	
+			$(this).attr('src','img/plus-small-white.png');
+			$(this).removeClass('show').addClass('hide');
+			
+			//hide child
+			
+			//console.log($(this).children());
+			
+			$(this).parent().siblings().hide();
+			
+			console.log(222222);
+			
+		}
+		else
+		{
+			$(this).attr('src','img/minus-small-white.png');
+			$(this).removeClass('hide').addClass('show');
+			$(this).parent().siblings().show();
+			console.log(111111);
+		}
+		
+	});
+	
+	//hide all menus
+	var xx =$('.menuParent img.selector');
+	
+	for(var x = 0; x < xx.length; x++)
+	{
+		//console.log(x);
+		//console.log($(xx[x]));
+		//if($(xx[x]).hasClass('hide'))
+			//$(xx)[x].click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+});
+
+</script>

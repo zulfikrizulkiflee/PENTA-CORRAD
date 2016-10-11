@@ -1,0 +1,14 @@
+VERSION HISTORY
+---------------
+
+V0.1.2 - 03.07.2009
+    - Fixed bug in scaling engine for half fixed scales
+
+V0.1.1 - 02.07.2009
+    - Improved scaling engine
+    - drawXYscale now uses that scaling engine too
+
+V0.1 - 01.07.2009
+    - Fork of pChart 1.27d, original by Jean-Damien Poglotti, forked by christian studer
+    - New scaling engine, proposed by T.Giammo improved by W.J. Dixon, R.A. Kronmal and Michael Mayer
+ 

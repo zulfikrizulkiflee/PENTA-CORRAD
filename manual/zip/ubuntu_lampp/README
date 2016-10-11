@@ -1,0 +1,4 @@
+1. Add or uncomment zip.so in extensions sections
+2. Copy zip.so to /opt/lampp/lib/php/extensions/no-debug-non-zts-20100525/ folder
+3. Restart LAMPP, and check phpinfo() for zip status.
+4. Done, and enjoy!

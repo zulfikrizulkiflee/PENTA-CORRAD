@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<extension type="theme" version="2.13">
+	<icon>screenshot.jpg</icon>
+	<name>modern_v2</name>
+	<title>Modern Template</title>
+	<description></description>
+	<author>Encoral Digital Solutions Sdn Bhd</author>
+	<authorUrl>http://www.nc.com.my</authorUrl>
+	<version>2.0</version>
+
+	<global>
+		<file type="js" path="main.js" />
+		<file type="css" path="main.css" />
+	</global>
+</extension>

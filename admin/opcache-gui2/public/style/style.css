@@ -1,0 +1,281 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333333;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    height: 36px;
+    background-color: #eeeeee;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eeeeee));
+    background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%);
+    background-image: -ms-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%);
+    background-image: -o-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 );
+    background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%);
+    border: 1px solid #e5e5e5;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 9px;
+}
+
+header h1 a {
+    color: #333333;
+    text-decoration: none;
+}
+
+header nav ul {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #e5e5e5;
+    float: left;
+}
+
+header nav ul li:hover, header nav ul li.active {
+    background-color: #eeeeee;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #0088cc;
+    line-height: 36px;
+    display: block;
+    padding: 0 15px;
+}
+
+footer ul {
+    width: 960px;
+    margin: 0 auto;
+    border-top: 1px solid #eeeeee;
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #333333;
+}
+
+footer ul li a:hover {
+    text-decoration: none;
+}
+
+#body {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+article {
+    position: relative;
+}
+
+article.cols-3.first {
+    margin-left: 0;
+}
+
+article.cols-3 {
+    width: 310px;
+    margin-left: 15px;
+    float: left;
+}
+
+article h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+    line-height: 1.4;
+    position: relative;
+    padding: 5px 20px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+    background-color: #6c8393;
+    background-image: -moz-linear-gradient(#7f95a5, #6c8393);
+    background-image: -webkit-linear-gradient(#7f95a5, #6c8393);
+    background-image: linear-gradient(#7f95a5, #6c8393);
+    background-repeat: repeat-x;
+    border: 1px solid #6e8290;
+    border-bottom-color: #586873;
+    border-radius: 4px 4px 0 0;
+}
+
+article h2 form {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 1px;
+}
+
+article .confirmation {
+    background: white;
+    top: 31px;
+    position: absolute;
+    left: 1px;
+    width: 308px;
+    height: 89px;
+    text-align: center;
+}
+
+article .confirmation p {
+    margin: 20px;
+    text-align: center;
+}
+
+article table, article canvas {
+    padding: 20px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #d8dee2;
+    border-top-color: white;
+    border-radius: 0 0 4px 4px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+article tr.script {
+    display: none;
+}
+
+article tr.script.active {
+    display: table-row;
+}
+
+article th {
+    text-align: left;
+    padding: 2px 20px;
+    white-space: nowrap;
+}
+
+article th.full_path {
+    font-weight: bold;
+}
+
+article th.hits, article th.memory_consumption, article th.last_used_timestamp, article th.last_used_timestamp, article th.timestamp {
+    padding-left: 0;
+    font-weight: bold;
+}
+
+article td.directory {
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+article td.directory img {
+    position: relative;
+    top: 3px;
+}
+
+article td.full_path {
+    padding-left: 20px;
+}
+
+article td.invalidate {
+    text-align: center;
+    vertical-align: middle;
+}
+
+article .invalidate {
+    width: 20px;
+}
+
+article td.empty {
+    text-align: center;
+}
+
+article .odd {
+    background: #eeeeee;
+}
+
+article ul {
+    border-right: 1px solid #d8dee2;
+    border-bottom: 1px solid #d8dee2;
+    display: inline;
+    position: absolute;
+    border-bottom-right-radius: 5px;
+    padding: 5px 5px 5px 20px;
+    background: white;
+}
+
+article .graph-legend {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #d8dee2;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+article .graph-legend.red {
+    background: #e0642e;
+}
+
+article .graph-legend.green {
+    background: #bce02e;
+}
+
+article .graph-legend.blue {
+    background: #2e97e0;
+}

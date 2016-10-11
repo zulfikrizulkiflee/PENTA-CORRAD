@@ -1,0 +1,40 @@
+.flcTreeMenu ul
+{
+    padding:0px;
+    text-decoration:none;
+}
+.flcTreeMenu li
+{
+    margin:0px 0px 0px 5px;
+    padding:0px 0px 0px 5px;
+    list-style-type:none;
+    text-align:left;
+    font-weight:normal;
+}
+.flcTreeMenu ul ul {}
+.flcTreeMenu li li {	margin:0px 0px 0px 12px; }
+.flcTreeMenu a { text-decoration:none; }
+.flcTreeMenu a:hover { text-decoration:underline; }
+.flcTreeMenu .symbol-item,
+.flcTreeMenu .symbol-open,
+.flcTreeMenu .symbol-close
+{
+    float:left;
+    width:16px;
+    height:1em;
+    background-position:left center;
+    background-repeat:no-repeat;
+}
+.flcTreeMenu .symbol-item  { vertical-align:middle; line-height:30px; background-image:url(icons/page.png); height:17px; }
+.flcTreeMenu .symbol-close { background-image:url(icons/plus.png);height:17px;}
+.flcTreeMenu .symbol-open  { background-image:url(icons/minus.png); height:17px;}
+.flcTreeMenu .symbol-item.last  { }
+.flcTreeMenu .symbol-close.last { }
+.flcTreeMenu .symbol-open.last  { }
+.flcTreeMenu li.item  { font-weight:normal; }
+.flcTreeMenu li.close { font-weight:normal; }
+.flcTreeMenu li.open  { /*font-weight:bold;*/  }
+.flcTreeMenu li.item.last  { }
+.flcTreeMenu li.close.last { }
+.flcTreeMenu li.open.last  { }
+.flcTreeMenuLinkDiv { height:17px;line-height:17px; }

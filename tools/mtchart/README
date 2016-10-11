@@ -1,0 +1,21 @@
+INFORMATIONS ABOUT mtChart
+--------------------------
+
+Please refer to the project home page for current downloads, SVN access,
+information about development and the issue tracker:
+    http://code.google.com/p/mtchart/
+    
+There's a mailing list for announcments and discussions at:
+    http://groups.google.com/group/mtchart
+    
+RSS-feeds for instant informations on ongoing development can be found at:
+    http://code.google.com/p/mtchart/feeds
+    
+
+mtChart is a fork of pChart 1.27d by Jean-Damien Pogolotti which can be found at:
+    http://pchart.sourceforge.net/
+    
+The development of mtChart is sponsered by Meteotest, Switzerland:
+    http://www.meteotest.ch
+
+mtChart is published under the GNU General Public License V3. See LICENSE for details.

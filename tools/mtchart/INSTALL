@@ -1,0 +1,12 @@
+INSTALLATION GUIDE
+------------------
+
+1. Download current release from:
+            http://code.google.com/p/mtchart/downloads/list
+    
+2. Extract the archive and put it either in your project directory or
+    in your include path.
+    
+3. Make sure the subdirectory 'Cache' is writable by your webserver
+    if you plan to use it:
+            chmod 777 Cache/

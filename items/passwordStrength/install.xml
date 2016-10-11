@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension>
+	<icon>pwdStrength.png</icon>
+	<name>passwordStrength</name>
+	<title>Password Strength</title>
+	<description>Password with Strength Indicator</description>
+	<version>1.0</version>
+	<author>Encoral Digital Solutions Sdn Bhd</author>
+	<authorUrl>www.nc.com.my</authorUrl>
+
+	<index>
+		<file type="js" path="passwordStrength.js" />
+	</index>
+
+	<builder>
+		<file type="php" path="passwordStrength.php" />
+	</builder>
+</extension>

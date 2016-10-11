@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="mtChartLogo.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="U:\Reference\Workspace\mtChartGoogle\trunk\doc\images\mtChartLogoSmall.png"
+   inkscape:export-xdpi="65.129997"
+   inkscape:export-ydpi="65.129997">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3159">
+      <stop
+         style="stop-color:#04b113;stop-opacity:1;"
+         offset="0"
+         id="stop3161" />
+      <stop
+         style="stop-color:#0434b1;stop-opacity:1;"
+         offset="1"
+         id="stop3163" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="333.4592"
+     inkscape:cy="549.04651"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1031"
+     inkscape:window-height="798"
+     inkscape:window-x="86"
+     inkscape:window-y="95" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:56px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#0434b1;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Futuri;-inkscape-font-specification:Futuri Italic"
+       x="214.28571"
+       y="457.21564"
+       id="text2383"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2385"
+         x="214.28571"
+         y="457.21564">mt</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="opacity:1;fill:#0434b1;fill-opacity:1;fill-rule:nonzero;stroke:#04b113;stroke-width:11.1947794;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3157"
+       sodipodi:cx="379.31229"
+       sodipodi:cy="494.75797"
+       sodipodi:rx="42.426407"
+       sodipodi:ry="42.426407"
+       d="M 411.8128,522.02913 A 42.426407,42.426407 0 1 1 412.42314,468.23117 L 379.31229,494.75797 z"
+       sodipodi:start="0.6981317"
+       sodipodi:end="5.6077429"
+       transform="matrix(0.4802471,0,0,-0.4821677,124.58875,673.32388)" />
+    <text
+       xml:space="preserve"
+       style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#04b113;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Futuri;-inkscape-font-specification:Futuri"
+       x="325.06952"
+       y="457.20688"
+       id="text3183"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3185"
+         x="325.06952"
+         y="457.20688">hart</tspan></text>
+  </g>
+</svg>

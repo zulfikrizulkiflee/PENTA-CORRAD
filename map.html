@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>PENTA</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <script src='js/jquery.min.js'></script>
+    <script src='css/materialize/js/materialize.min.js'></script>
+    <script src='js/gmap.js'></script>
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/materialize/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        
+        .control {
+            padding: 1rem;
+            background-color: beige;
+        }
+        
+        #map {
+            /*            position: absolute;*/
+            /*            top: 10vh;*/
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            /*            z-index: -1;*/
+        }
+        
+        .search {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            padding-right: 10px;
+        }
+        
+        .hidden {
+            float: left;
+            height: 90vh;
+            width: 27vw;
+            z-index: 999999;
+            position: absolute;
+            top: 10vh;
+            left: -25vw;
+            color: #000;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12 control" style="padding:1rem">
+            <!--            <h5><span class="fa fa-desktop"></span> Panel Kawalan</h5>-->
+            <!-- Dropdown Trigger --><a id="jenis" class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1' style="width:17vw;">Jenis Taman</a> <a id="zon" class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown2' style="width:17vw;background-color:#4d3ce6">Pilih Zon</a> <a id="lokasi" class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown3' style="width:17vw;background-color:#3CAFE6">Pilih Lokasi</a> <a id="taman" class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown4' style="width:17vw;background-color:#23E28A">Pilih Taman</a>
+            <div class="search">
+                <input type="text" id="search" style="width:17vw;" placeholder="Carian"><a href="#"><i class="fa fa-search"></i></a></div>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Jenis Taman</a></li>
+                <li><a href="#!">Taman Awam</a></li>
+                <li><a href="#!">Taman Kanak-kanak</a></li>
+            </ul>
+            <ul id='dropdown2' class='dropdown-content'>
+                <li><a href="#!">Pilih Zon</a></li>
+                <li><a href="#!">Zon 1</a></li>
+                <li><a href="#!">Zon 2</a></li>
+                <li><a href="#!">Zon 3</a></li>
+            </ul>
+            <ul id='dropdown3' class='dropdown-content'>
+                <li><a href="#!">Pilih Lokasi</a></li>
+                <li><a href="#!">Kampung Melayu</a></li>
+                <li><a href="#!">Pandan</a></li>
+                <li><a href="#!">Taman Mount Austin</a></li>
+            </ul>
+            <ul id='dropdown4' class='dropdown-content'>
+                <li><a href="#!">Pilih Taman</a></li>
+                <li><a href="#!">TA1 - Taman Hutan Bandar</a></li>
+                <li><a href="#!">TA2 - Taman Orkid</a></li>
+                <li><a href="#!">TA3 - Taman Merdeka</a></li>
+            </ul>
+        </div>
+        <div class="col s12">
+            <div id="map"></div>
+            <div class="fixed-action-btn horizontal click-to-toggle" style="top: 12vh; right: 10px;height:10vh">
+                <a class="btn-floating btn-large tooltipped" id="stat" data-tooltip="Semua" style="background-color:#E91D62"> <i class="large material-icons nampak">visibility</i> </a>
+                <ul class="lihat">
+                    <li><a class="btn-floating green tooltipped" data-tooltip="Sangat Baik"><i class="material-icons">verified_user</i></a></li>
+                    <li><a class="btn-floating blue tooltipped" data-tooltip="Baik"><i class="material-icons">thumb_up</i></a></li>
+                    <li><a class="btn-floating yellow tooltipped" data-tooltip="Sederhana"><i class="material-icons">thumbs_up_down</i></a></li>
+                    <li><a class="btn-floating red tooltipped" data-tooltip="Teruk"><i class="material-icons">thumb_down</i></a></li>
+                    <li><a class="btn-floating purple tooltipped" data-tooltip="Semua"><i class="material-icons">visibility</i></a></li>
+                </ul>
+            </div> <a href="#" class="btn-floating waves-effect waves-light tooltipped" style="position:absolute;bottom:10px;left:10px;background-color:#E91D62" id="recenter" data-tooltip="Recenter" data-position="left"><i class="material-icons">my_location</i></a>
+            <!--            <a href="index.html" class="btn-floating btn-large waves-effect waves-light deep-blue darken-2 tooltipped" style="position:absolute;bottom:80px;right:10px;" id="logout" data-tooltip="Logout" data-position="left"><i class="material-icons">power_settings_new</i></a>--></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcKg_hVQ5XpbCYvEj9n1oj1t_Wfnloi-E&callback=initMap&libraries=places">
+        </script>
+    </div>
+    <!--
+    <div class="hidden">
+    <div style="float:left;background-color: rgba(0, 0, 255, 0.3);height:90vh;width:25vw;box-sizing:border-box">Tugas</div>
+    <div style="float:right;box-sizing:border-box;padding-top:40vh;"><a href="#" id="slide"><i class="material-icons">play_arrow</i></a></div>
+</div>
+-->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <ul class="collection">
+                <li class="collection-item avatar"> <i class="material-icons circle">folder</i> <span class="title">Papan Tanda</span>
+                    <p>Catatan:
+                        <br> Berkeadaan baik </p> <a href="#!" class="secondary-content">B</a> </li>
+                <li class="collection-item avatar"> <i class="material-icons circle green">insert_chart</i> <span class="title">Gelungsur</span>
+                    <p>Catatan:
+                        <br> Karat dan berlumut </p> <a href="#!" class="secondary-content">D</a> </li>
+                <li class="collection-item avatar"> <i class="material-icons circle red">play_arrow</i> <span class="title">Buaian</span>
+                    <p>Catatan:
+                        <br> </p> <a href="#!" class="secondary-content">A</a> </li>
+            </ul>
+        </div>
+        <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a> </div>
+    </div>
+    <script src='js/penta-js.js'></script>
+</body>
+
+</html>

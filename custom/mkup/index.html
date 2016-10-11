@@ -1,0 +1,20 @@
+
+<script language="javascript" type="text/javascript" src="../../tools/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="mkup.js"></script>
+
+
+<script>
+
+var mkup = Mkup.mkup($('results'));
+mkup.div()
+    .text("inside the div")
+    .childSpan()
+    .text("inside the span")
+    .up()
+    .text("back inside the div")
+    .write();
+
+</script>
+
+<div id="results"></div>
+

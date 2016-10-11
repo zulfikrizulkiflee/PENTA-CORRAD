@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databases>
+	<!-- database configuration for CORRAD Engine-->
+	<database id="MySQL" engine="yes">
+		<dbms_name>MySQL</dbms_name>
+		<connection>localhost</connection>
+		<name>corrad214_engine</name>
+		<username>root</username>
+		<password></password>	
+		<desc>POC SPP</desc>
+	</database>
+	<!--
+	<database id="UserData" engine="no">
+		<dbms_name>Oracle</dbms_name>
+		<connection>localhost</connection>
+		<name>//localhost/orcl</name>
+		<username>corrad_demo_usr</username>
+		<password>corrad_demo_usr</password>	
+		<desc></desc>
+	</database>
+	-->
+	<!-- 
+	<database id="Informix" engine="yes">
+		<dbms_name>Informix</dbms_name>
+		<connection>localhost</connection>
+		<name>nima</name>
+		<username>root</username>
+		<password>root</password>
+		<server>demo_on</server>
+		<service>9088</service>
+		<protocol>onsoctcp</protocol>
+		<desc>Informix Engine</desc>
+	</database>
+	
+	<database id="Informix2" engine="no">
+		<dbms_name>Informix</dbms_name>
+		<connection>localhost</connection>
+		<name>data_usr</name>
+		<username>root</username>
+		<password>root</password>
+		<server>demo_on</server>
+		<service>9088</service>
+		<protocol>onsoctcp</protocol>
+		<desc>Informix </desc>
+	</database>
+	--> 
+	<!-- Other DB configuration are below-->
+	<!-- Oracle,MySQL,Sybase,SybaseASE,MsSQL,PostgreSQL,SQLServer -->	
+		
+
+	<!--database id="MySQL" engine="yes">
+		<dbms_name>MySQL</dbms_name>
+		<connection>localhost</connection>
+		<name>corrad_test</name>
+		<username>multidb</username>
+		<password>1234</password>	
+		<desc>CORRAD Engine</desc>
+	</database>
+	
+	<database id="UserData" engine="no">
+		<dbms_name>Oracle</dbms_name>
+		<connection>localhost</connection>
+		<name>//localhost/orcl</name>
+		<username>corrad_demo_usr</username>
+		<password>corrad_demo_usr</password>	
+		<desc></desc>
+	</database-->
+
+	
+	
+</databases>

@@ -1,0 +1,225 @@
+<script language="javascript" type="text/javascript" src="../../tools/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.droppable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.position.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.resizable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.selectable.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery.ui.sortable.js"></script>
+<!--<script language="javascript" type="text/javascript" src="js/ui.nestedSortable.js"></script>-->
+<style>
+ul
+{
+	list-style-type: none;
+	position:relative;
+	margin:0px 0px 0px 18px;
+	padding:0px 0px 0px 0px;
+	font-size:12px;
+	font-family:Arial;
+	 min-height:18px; 
+
+}
+li
+{
+	/*border-bottom:1px solid #E5E5E5;*/
+	list-style-type: none;
+	padding:0px;
+	margin:0px;
+	 width: 150px; 
+	 min-height:18px;
+}
+#menuContainer 
+{
+	width:450px;
+	height:500px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border:1px solid black;
+	padding: 10px 0px 0px 0px;
+}
+
+#menuContainer > ul
+{
+	margin:0px;
+}
+
+.sortTarget
+{
+	background-color:yellow;
+	height:20px;
+}
+.handle
+{
+	
+	height:10px;
+	background-image:url(img/grid-dot.png);
+	background-repeat:no-repeat;
+	cursor:move;
+	height:20px;
+}
+.handle span
+{
+	position:absolute;right:0px;
+}
+#menuButtons
+{
+	width:250px;
+}
+.selected
+{
+	background-color:orange;
+}
+
+.parent .selector show
+{
+	
+}
+
+.menuParent
+{
+	cursor:pointer;
+}
+
+</style>
+<ul>
+  <li id="newMenu">New Menu</li>
+</ul>
+
+<ul id="newParent" class="menu">
+	<li id="0" class="menuParent"><img src="img/minus-small-white.png" class="selector show" /><span class="title">New Parent</span></li>
+	<li>sss</li>
+</ul>
+
+<div id="menuContainer">
+	<ul class="menu">
+		<li id="0" class="menuParent"><img src="img/minus-small-white.png" class="selector show" /><span class="title">Profil</span></li>
+		<ul class="submenu">
+			<li id="1">Tukar Kata Laluan</li>
+			<li id="2">Themes</li>
+			<li id="3">aaaaaaaa</li>
+			<li id="4">test</li>
+			<li id="5">calendar</li>
+		</ul>
+	</ul>	
+	<ul class="menu">
+		<li id="21" class="menuParent"><img src="img/minus-small-white.png" class="selector show" /><span class="title">Konfigurasi</span></li>
+		<ul class="menu">
+			<li id="6">Konfigurasi Sistem</li>
+			<li id="7">Menu Editor</li>
+			<li id="8">Page Editor</li>
+			<li id="9">Control Editor</li>
+			<li id="10">BL Editor</li>
+			<li id="11">Trigger Editor</li>
+			<li id="12">Translation Editor</li>
+			<li id="13">Page Wizard</li>
+			<li id="14">Extension Editor</li>
+			<ul class="menu">
+				<li id="22" class="menuParent"><img src="img/minus-small-white.png" class="selector show" /><span class="title">Lain Lain</span></li>
+				<ul class="menu">
+					<li id="15">Pendaftaran Pengguna</li>
+					<li id="16">User Group Management</li>
+					<li id="17">Reference</li>
+				</ul>
+			</ul>
+			<li id="18">Import Export</li>
+			<li id="19">Message Editor</li>
+			<li id="20">Audit Trail</li></ul>	
+	</ul>
+	
+</div>
+<div id="menuButtons">
+	<input type="button" value="+" />
+	<input type="text" id="currentMenu" />
+</div>
+
+
+<script>
+$(document).ready(function(){
+	
+	$('#menuContainer').sortable({
+		placeholder: "sortTarget"
+	});
+
+	$('ul').sortable({
+		/*items: "li:not(li.menuParent)",*/
+		connectWith: ".menu",
+		/*distance: 15,*/
+		placeholder: "sortTarget"
+		/*revert: true*/		//with animation
+	});
+	
+	$( "ul, li" ).disableSelection();
+	
+	$("#newMenu").draggable({
+      connectToSortable: "#menuContainer ul",
+      helper: "clone"
+      /*revert: "invalid"*/
+    });
+    
+	$("#newParent").draggable({
+      connectToSortable: "#menuContainer",
+      helper: "clone"
+      /*revert: "invalid"*/
+    });
+	
+	$('ul').dblclick(function(){	
+		//$(this).addClass('selected');	
+	});
+	
+	$('li').click(function(){
+		$('#currentMenu').val($(this).attr('id'));	
+		console.log($(this).attr('id'));
+	});
+	
+	$('.menuParent img.selector').click(function(){
+	
+		if($(this).hasClass('show'))
+		{	
+			$(this).attr('src','img/plus-small-white.png');
+			$(this).removeClass('show').addClass('hide');
+			
+			//hide child
+			
+			//console.log($(this).children());
+			
+			$(this).parent().siblings().hide();
+			
+			console.log(222222);
+			
+		}
+		else
+		{
+			$(this).attr('src','img/minus-small-white.png');
+			$(this).removeClass('hide').addClass('show');
+			$(this).parent().siblings().show();
+			console.log(111111);
+		}
+		
+	});
+	
+	//hide all menus
+	var xx =$('.menuParent img.selector');
+	
+	for(var x = 0; x < xx.length; x++)
+	{
+		//console.log(x);
+		//console.log($(xx[x]));
+		//if($(xx[x]).hasClass('hide'))
+			//$(xx)[x].click();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+});
+
+</script>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension>
+	<icon>timepicker.png</icon>
+	<name>timepicker</name>
+	<title>Time Picker</title>
+	<description>Embedded Time Picker</description>
+	<version>1.0</version>
+	<author>Encoral Digital Solutions Sdn Bhd</author>
+	<authorUrl>http://google.com.my</authorUrl>
+
+	<index>
+		<file type="js" path="jquery.ui.timepicker.js" />
+		<file type="js" path="include/ui-1.10.0/jquery.ui.position.js" />
+		<file type="css" path="jquery.ui.timepicker.css" />
+		<file type="css" path="include/ui-1.10.0/ui-lightness/jquery-ui-1.10.0.custom.min.css" />
+	</index>
+
+	<builder>
+		<file type="php" path="PickerTime.php" />
+	</builder>
+</extension>

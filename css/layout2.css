@@ -1,0 +1,27 @@
+/*-- layout structure, menu right --*/
+
+body{
+	margin: 0;
+	font-family: "Arial";
+	font-size: 12px;
+}
+
+#header{
+	height: 70px;
+}
+
+#topMenu{
+	float:right;
+}
+
+#topMenuBar{
+	display: none;
+}
+
+#sidebar{
+	float:right;
+}
+
+.profileImageBlock img{
+	max-width: 72px;
+}

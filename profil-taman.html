@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Profil Taman::Taman Merdeka</title>
+    <script src='js/jquery.min.js'></script>
+    <script src='css/materialize/js/materialize.min.js'></script>
+    <script src='js/gmap.js'></script>
+    <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/materialize/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        .head {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            width: 40vw;
+            height: 80vh;
+            box-sizing: border-box;
+        }
+        
+        .komponen {
+            position: absolute;
+            top: 10px;
+            left: 25vw;
+            width: 74vw;
+            height: 97vh;
+            box-sizing: border-box;
+        }
+        
+        .staticmap {
+            position: fixed;
+            bottom: 10px;
+            left: 20px;
+            box-sizing: border-box;
+            background-image: url("http://maps.googleapis.com/maps/api/staticmap?center=taman+merdeka,johor+bharu&zoom=13&scale=false&size=290x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7Ctaman+merdeka,johor+bharu");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            line-height: 0;
+            margin-top: 10px;
+        }
+        
+        .staticmap img {
+            max-width: 23vw;
+            max-height: 35vh;
+            opacity: 0;
+        }
+        
+        .taman-pic {
+            width: 17vw;
+            height: 17vw;
+            padding-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image"> <img src="img/merdeka.jpg"> <span class="card-title">Taman Merdeka</span> </div>
+                    <div class="card-content">
+                        <p>Lokasi: Jalan Molek 1/8, Taman Molek</p>
+                        <p>Keluasan: 1 ekar</p>
+                        <p>Pakej: 9</p>
+                    </div>
+                    <div class="card-action"><b>GRED KESELURUHAN: B</b></div>
+                </div>
+            </div>
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image"> <img src="http://maps.googleapis.com/maps/api/staticmap?center=taman+merdeka,johor+bharu&zoom=13&scale=false&size=290x230&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7Ctaman+merdeka,johor+bharu"></div>
+                </div>
+            </div>
+        </div>
+        <div class="komponen">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3"><a href="#test1">Hardscape</a></li>
+                        <li class="tab col s3"><a href="#test2">Softscape</a></li>
+                        <li class="tab col s3"><a href="#test3">Galeri</a></li>
+                    </ul>
+                </div>
+                <div id="test1" class="col s12">
+                    <table class="striped">
+                        <thead>
+                            <tr>
+                                <th data-field="id">Jenis Komponen</th>
+                                <th data-field="name">Baik</th>
+                                <th data-field="name">Rosak</th>
+                                <th data-field="name">Jumlah</th>
+                                <th data-field="name">Cat</th>
+                                <th data-field="name">Catatan</th>
+                                <th data-field="price">Gred</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Papan Tanda Pemberitahuan</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td><i class="material-icons">shuffle</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Set Alatan Permainan</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>a- Gelungsur</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td><i class="material-icons">done</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>B</td>
+                            </tr>
+                            <tr>
+                                <td>b- Tangga</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td><i class="material-icons">shuffle</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>c- Jambatan</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td><i class="material-icons">done</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>Buaian</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td><i class="material-icons">done</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>B</td>
+                            </tr>
+                            <tr>
+                                <td>Jongkang-Jongket</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td><i class="material-icons">shuffle</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>C</td>
+                            </tr>
+                            <tr>
+                                <td>Spring Riders</td>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>1</td>
+                                <td><i class="material-icons">done</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>Kotak Pasir</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td><i class="material-icons">done</i></td>
+                                <td>Karat, tercabut</td>
+                                <td>B</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="test2" class="col s12">
+                    <div class="row">
+                        <table class="striped">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Jenis Tumbuhan</th>
+                                    <th data-field="name">Sihat</th>
+                                    <th data-field="name">Mati</th>
+                                    <th data-field="name">Sakit</th>
+                                    <th data-field="name">Jumlah</th>
+                                    <th data-field="name">Catatan</th>
+                                    <th data-field="price">Gred</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pokok teduhan</td>
+                                    <td>22</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>22</td>
+                                    <td></td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>Palma</td>
+                                    <td>11</td>
+                                    <td>1</td>
+                                    <td>3</td>
+                                    <td>15</td>
+                                    <td>Kurang Baja</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>Pokok renek</td>
+                                    <td>27</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>30</td>
+                                    <td></td>
+                                    <td>B</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="test3" class="col s12">
+                    <div class="row">
+                        <div class="col s12 m6 l3"> <img class="materialboxed taman-pic" data-caption="Khamis 20 Oktober 2016" src="img/merdeka6.jpg"> </div>
+                        <div class="col s12 m6 l3"> <img class="materialboxed taman-pic" data-caption="Khamis 20 Oktober 2016" src="img/merdeka2.jpg"> </div>
+                        <div class="col s12 m6 l3"> <img class="materialboxed taman-pic" data-caption="Khamis 20 Oktober 2016" src="img/merdeka3.jpg"> </div>
+                        <div class="col s12 m6 l3"> <img class="materialboxed taman-pic" data-caption="Khamis 20 Oktober 2016" src="img/merdeka4.jpg"> </div>
+                        <div class="col s12 m6 l3"> <img class="materialboxed taman-pic" data-caption="Khamis 20 Oktober 2016" src="img/merdeka5.jpg"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            (function titleScroller(text) {
+                document.title = text;
+                setTimeout(function () {
+                    titleScroller(text.substr(1) + text.substr(0, 1));
+                }, 500);
+            }(" Profil Taman::Taman Merdeka"));
+        </script>
+</body>
+
+</html>

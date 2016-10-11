@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<extension>
+	<icon>treelist.png</icon>
+	<name>treeList</name>
+	<title>Tree List</title>
+	<description>Create Tree List From HTML List</description>
+	<version>1.0</version>
+	<author>Encoral Digital Solutions Sdn Bhd</author>
+	<authorUrl>http://www.nc.com.my</authorUrl>
+
+	<index>
+		<file type="js" path="TreeMenu.js" />
+		<file type="css" path="style.css" />
+	</index>
+
+	<builder>
+		<file type="php" path="tree.php" />
+	</builder>
+</extension>
